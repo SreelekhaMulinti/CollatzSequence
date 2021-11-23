@@ -2,20 +2,20 @@ import java.util.*;
 public class CollatzSequence{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
+		int num = sc.nextInt();
 		int operations = 0;
-		while(n != 1){
-			System.out.print(n+" ");
-			//If n is even, n = n/2
-			if((n&1) == 0){
-				n = n/2;
+		while(num != 1){
+			System.out.print(num+" ");
+			//If num is even, num = num/2
+			if((num&1) == 0){
+				num = num/2;
 			} 
-			//if n is odd,n = (3n+1)
+			//if num is odd,num = (3*num+1)
 			else{
-				n = 3*n+1;
+				num = 3*num+1;
 			}
 			operations++;
 		}
-		System.out.print(n+" "+operations);
+		System.out.print(num+" "+operations);
 	}
 }
